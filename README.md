@@ -21,8 +21,12 @@ A comprehensive PHP MVC web application for managing and analyzing election resu
 # Setup Instructions
 
 
-clone this repository and cd not it
+clone this repository and cd into it
+```bash
+git clone https://github.com/Gr33Nai/inec-app.git
 
+cd inec-app
+```
 1. Make scripts executable:
    ```bash
    chmod +x setup.sh start.sh stop.sh
