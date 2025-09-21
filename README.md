@@ -4,12 +4,12 @@ This repository contains INEC elections monitoring design with php, mysql and ng
 
 
 
-INEC Polling Unit Results System
+# INEC Polling Unit Results System
 
 A comprehensive PHP MVC web application for managing and analyzing election results from Nigeria's Independent National Electoral Commission (INEC).
 
 
-Features
+# Features
 
 
 · Polling Unit Results: View detailed results for individual polling units
@@ -18,7 +18,7 @@ Features
 · New Result Entry: Add new polling unit results to the system
 · Data Integrity Verification: Check for discrepancies between announced and calculated result
 
-Setup Instructions
+# Setup Instructions
 
 
 clone this repository and cd not it
@@ -41,13 +41,8 @@ clone this repository and cd not it
 
 This structure provides a complete, self-contained application with both Docker and traditional deployment
 
-1. 
 
-
-
-2
-
-Database Structure
+# Database Structure
 
 The application uses the following main tables:
 
