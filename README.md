@@ -18,6 +18,8 @@ A comprehensive PHP MVC web application for managing and analyzing election resu
 · New Result Entry: Add new polling unit results to the system
 · Data Integrity Verification: Check for discrepancies between announced and calculated result
 
+provides a comprehensive way to verify the integrity of election results at the state level.
+
 # Setup Instructions
 
 
