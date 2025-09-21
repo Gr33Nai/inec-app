@@ -65,20 +65,31 @@ Technical Details
 · Database: MySQL
 · Security: Input sanitization, PDO prepared statements
 
+# Troubleshooting
 
+Common issues and solutions:
 
-Support
+1. Database connection error:
+   · Verify MySQL is running
+   · Check database credentials in inc/config/database.php
+2. Page not found error:
+   · Ensure mod_rewrite is enabled
+   · Check .htaccess file is present
+3. Permission errors:
+   · Verify file permissions are set correctly
+
+# Support
 
 For questions, issues, or contributions, please contact:
 
 · Email: fadilmustapha64@gmail.com
 · Website: https://fadil59.pythonanywhere.com/
 
-License
+# License
 
 This project is open source and available under the MIT License.
 
-Contributing
+# Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
