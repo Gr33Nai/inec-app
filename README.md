@@ -8,62 +8,6 @@ INEC Polling Unit Results System
 
 A comprehensive PHP MVC web application for managing and analyzing election results from Nigeria's Independent National Electoral Commission (INEC).
 
-Directory structure 
-
-inec-app/
-│
-├── docker-compose.yml
-├── Dockerfile.php
-├── nginx.conf
-├── bincom_test.sql
-├── setup.sh
-├── start.sh
-├── stop.sh
-│
-├── inc/
-│   └── config/
-│       └── database.php
-│
-├── logs/
-│   └── nginx/
-│       ├── access.log
-│       └── error.log
-│
-├── static/
-│   ├── css/
-│   │   └── style.css
-│   └── js/
-│       └── script.js
-│
-├── controllers/
-│   ├── PollingUnitController.php
-│   ├── LgaController.php
-│   ├── ResultController.php
-│   └── StateController.php
-│
-├── models/
-│   ├── PollingUnit.php
-│   ├── Lga.php
-│   ├── Ward.php
-│   ├── Party.php
-│   ├── AnnouncedPuResults.php
-│   ├── AnnouncedLgaResults.php
-│   └── State.php
-│
-├── views/
-│   ├── polling_unit/
-│   │   └── results.php
-│   ├── lga/
-│   │   └── results.php
-│   ├── result/
-│   │   └── new.php
-│   └── state/
-│       └── results.php
-│
-├── index.php
-├── .htaccess
-└── README.md
-
 
 Features
 
