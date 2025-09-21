@@ -1,0 +1,61 @@
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./logs/nginx:/var/log/nginx
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - inec-network
+
+  php:
+    build: 
+      context: .
+      dockerfile: Dockerfile.php
+    volumes:
+      - ./:/var/www/html
+    environment:
+      - PHP_FPM_LISTEN=9000
+    networks:
+      - inec-network
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: bincomphptest
+      MYSQL_USER: inec_user
+      MYSQL_PASSWORD: kali
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./bincom_test.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - inec-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: rootpassword
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    networks:
+      - inec-network
+
+volumes:
+  mysql_data:
+
+networks:
+  inec-network:
+    driver: bridge
